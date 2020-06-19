@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(30,30,30);
+    padding: 0px;
+    margin: 0px;
+}
+.count{
+    margin-left: 25%;
+}
+.runas{
+
+    max-width: 50%;
+    margin-right: -10px;
+}
+.resto{
+    background: green;
+
+}
+.img{
+    width: 64px;
+}
+#bt{
+    margin-left: 10%;
+    margin-top: 50px;
+    padding: 15px;
+    width: 120px;
+    background: rgb(30,35,40);
+    border-color: rgb(200,169,108);
+    box-shadow: 1.5px 1.5px 1px black ;
+    color: rgb(184, 171, 132);
+    font-family: 'Roboto Slab', serif;
+    cursor: pointer;
+}
+#bt:focus{
+    outline: thin dotted;
+        outline: 0px auto -webkit-focus-ring-color;
+        outline-offset: 0px;
+}    
+#bt:active{
+    box-shadow: 3px 3px 3px black inset;
+}
+.invisible{
+    opacity: 0;
+}
+.Rescolha{
+    margin-left: -20%;
+    margin-top: 20%;
+}
