@@ -31,6 +31,8 @@
     }
 
 function go(){
+    document.getElementById("h11").style.opacity = "1"
+    document.getElementById("h12").style.opacity = "1"
     for(x=1; x<=5; x++){
         document.getElementById("img" + x).style.opacity = "0"
     }
@@ -350,7 +352,6 @@ function go(){
                         varia--
                         calcular(varia, meuA2[1])
                     }else{
-
                         varia = meuA2[0]
                         varia++
                         calcular(varia, meuA2[1])
@@ -392,9 +393,7 @@ function go(){
 
                 }
             }
-        }
-        
-        
+        }       
 }
 function mudarcor(){
         document.getElementById("bt").style.borderColor = "rgb(216, 194, 150)"

@@ -1,13 +1,18 @@
 body{
     background-color: rgb(30,30,30);
+    background-size: 100%;
+    background-repeat: none !important;
+    background-position: fixed;
     padding: 0px;
     margin: 0px;
 }
 .count{
-    margin-left: 25%;
+    border: 1px solid red;
+    width: 99.8%;
+    border-color: rgb(120,90,40);  
 }
 .runas{
-
+    margin-left: 25%;
     max-width: 50%;
     margin-right: -10px;
 }
@@ -29,6 +34,8 @@ body{
     color: rgb(184, 171, 132);
     font-family: 'Roboto Slab', serif;
     cursor: pointer;
+    margin-left: 25%;
+    margin-bottom: 5px;
 }
 #bt:focus{
     outline: thin dotted;
@@ -44,4 +51,10 @@ body{
 .Rescolha{
     margin-left: -20%;
     margin-top: 20%;
+}
+.h1{
+    opacity: 0;
+    text-transform: uppercase;
+    font-size: 15pt;
+    color: rgb(179, 167, 129);
 }
