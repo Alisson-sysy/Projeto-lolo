@@ -252,148 +252,146 @@ function go(){
                 }
                 document.getElementById("img6").src = r
             }
-            if(p == 1){
-                setTimeout(function aquelecaraali(){animacao2("image/precisão/Rune_Precision.png")}, 1000)
-                
-                meuA2 = [ ]
-                img = ["image/precisão/Runas/Resto/Rune_Overheal.png", "image/precisão/Runas/Resto/Rune_Triumph.png", "image/precisão/Runas/Resto/Rune_Precision.png", "image/precisão/Runas/Resto/Rune_Legend_-_Alacrity.png", "image/precisão/Runas/Resto/Rune_Legend_-_Tenacity.png", "image/precisão/Runas/Resto/Rune_Legend_-_Bloodline.png", "image/precisão/Runas/Resto/Rune_Coup_de_Grace.png", "image/precisão/Runas/Resto/Rune_Cut_Down.png", "image/precisão/Runas/Resto/Rune_Last_Stand.png"]
-                for(x=0; x<=1; x++){
-                    restoM2 = Math.round(8 * (Math.random()));
-                    meuA2 [x] = restoM2;
-                }
-                if(meuA2[0] == meuA2[1]){
-                    if(meuA2[0] == 9){
-                        varia = meuA2[0]
-                        varia--
-                        calcular(varia, meuA2[1])
-                    }else{
-
-                        varia = meuA2[0]
-                        varia++
-                        calcular(varia, meuA2[1])
-                    }
-                }else{  
-                    calcular(meuA2[0], meuA2[1])
-                }
-                function calcular(p0, p1){
-                    document.getElementById("img7").src = img[p0]
-                    document.getElementById("img8").src = img[p1]
-
-                }
-                
+            /*Sortar as img da segunda runa*/
+            meuA2 = [ ]
+            for(x=0; x<=1; x++){
+                restoM2 = Math.round(2 * (Math.random()));
+                meuA2 [x] = restoM2;
             }
-            if(p == 2){
-                setTimeout(function aquelecaraali(){animacao2("image/dominação/Rune_Domination.png")}, 1000)
-                meuA2 = [ ]
-                img = ["image/dominação/Resto/Rune_Cheap_Shot.png", "image/dominação/Resto/Rune_Taste_of_Blood.png", "image/dominação/Resto/Rune_Sudden_Impact.png", "image/dominação/Resto/Rune_Zombie_Ward.png", "image/dominação/Resto/Rune_Ghost_Poro.png", "image/dominação/Resto/Rune_Eyeball_Collection.png", "image/dominação/Resto/Rune_Ravenous_Hunter.png", "image/dominação/Resto/Rune_Ingenious_Hunter.png", "image/dominação/Resto/Rune_Relentless_Hunter.png", "image/dominação/Resto/Rune_Ultimate_Hunter.png"]
+                gorune2(meuA2[0], meuA2[1])
+
+            function gorune2(ma0, ma1){
+                /*Sortea as duas linhas que serão usadas na segunda runa*/
+                Nlinha = [ ]
                 for(x=0; x<=1; x++){
-                    restoM2 = Math.round(8 * (Math.random()));
-                    meuA2 [x] = restoM2;
+                    aleatoto = Math.round(2 * (Math.random()) + 1);
+                    Nlinha [x] = aleatoto;
                 }
-                if(meuA2[0] == meuA2[1]){
-                    if(meuA2[0] == 9){
-                        varia = meuA2[0]
-                        varia--
-                        calcular(varia, meuA2[1])
+                if(Nlinha[0] == Nlinha[1]){
+                    if(Nlinha[0] == 3){
+                        Nlinha2 = Nlinha[0]
+                        Nlinha2 --
+                        linha(Nlinha2, Nlinha[1])
                     }else{
-
-                        varia = meuA2[0]
-                        varia++
-                        calcular(varia, meuA2[1])
+                        Nlinha2 = Nlinha[0]
+                        Nlinha2 ++
+                        linha(Nlinha2, Nlinha[1])
+                    } 
+                }else{
+                    linha(Nlinha[0], Nlinha[1])
+                }
+                function linha(n0, n1){
+                if(p == 1){
+                   
+                    setTimeout(function aquelecaraali(){animacao2("image/precisão/Rune_Precision.png")}, 1000)
+                    imgs1 = ["image/precisão/Runas/Resto/Rune_Overheal.png", "image/precisão/Runas/Resto/Rune_Precision.png", "image/precisão/Runas/Resto/Rune_Triumph.png"]
+                    imgs2 = ["image/precisão/Runas/Resto/Rune_Legend_-_Alacrity.png", "image/precisão/Runas/Resto/Rune_Legend_-_Tenacity.png", "image/precisão/Runas/Resto/Rune_Legend_-_Bloodline.png"]               
+                    imgs3 = ["image/precisão/Runas/Resto/Rune_Coup_de_Grace.png", "image/precisão/Runas/Resto/Rune_Cut_Down.png", "image/precisão/Runas/Resto/Rune_Last_Stand.png"]               
+                    document.getElementById("img7").src = imgs3[ma0]
+                        if(n0 == 1){             
+                            document.getElementById("img7").src = imgs1[ma0]
+                        }else if(n0 == 2){
+                            document.getElementById("img7").src = imgs2[ma0]
+                        }else if(n0 == 3){
+                           
+                        }
+    
+                        if(n1 == 1){
+                            document.getElementById("img8").src = imgs1[ma1]
+                        }else if(n1 == 2){
+                            document.getElementById("img8").src = imgs2[ma1]
+                        }else if(n1 == 3){
+                            document.getElementById("img8").src = imgs3[ma1]
+                        }
+                    
+                }
+                if(p == 2){
+                    setTimeout(function aquelecaraali(){animacao2("image/dominação/Rune_Domination.png")}, 1000)
+                    imgs1 = ["image/Dominação/Resto/Rune_Cheap_Shot.png", "image/Dominação/Resto/Rune_Taste_of_Blood.png", "image/Dominação/Resto/Rune_Sudden_Impact.png"]               
+                    imgs2 = ["image/Dominação/Resto/Rune_Zombie_Ward.png", "image/Dominação/Resto/Rune_Ghost_Poro.png", "image/Dominação/Resto/Rune_Eyeball_Collection.png"]              
+                    imgs3 = ["image/Dominação/Resto/Rune_Ravenous_Hunter.png", "image/Dominação/Resto/Rune_Ingenious_Hunter.png", "image/Dominação/Resto/Rune_Relentless_Hunter.png", "image/Dominação/Resto/Rune_Ultimate_Hunter.png"]               
+                    if(n0 == 1){
+                        document.getElementById("img7").src = imgs1[ma0]
+                    }else if(n0 == 2){ 
+                        document.getElementById("img7").src = imgs2[ma0]
+                    }else if(n0 == 3){
+                        document.getElementById("img7").src = imgs3[ma0]
                     }
-                }else{  
-                    calcular(meuA2[0], meuA2[1])
-                }
-                function calcular(p0, p1){
-                    document.getElementById("img7").src = img[p0]
-                    document.getElementById("img8").src = img[p1]
 
-                }
-            }
-            if(p == 3){
-                setTimeout(function aquelecaraali(){animacao2("image/Feitiçaria/Rune_Sorcery.png")}, 1000)
-                meuA2 = [ ]
-                img = ["image/feitiçaria/Resto/Rune_Nullifying_Orb.png", "image/feitiçaria/Resto/Rune_Manaflow_Band.png", "image/feitiçaria/Resto/Rune_Nimbus_Cloak.png", "image/feitiçaria/Resto/Rune_Transcendence.png", "image/feitiçaria/Resto/Rune_Celerity.png", "image/feitiçaria/Resto/Rune_Absolute_Focus.png", "image/feitiçaria/Resto/Rune_Scorch.png", "image/feitiçaria/Resto/Rune_Waterwalking.png", "image/feitiçaria/Resto/Rune_Gathering_Storm.png"]
-                for(x=0; x<=1; x++){
-                    restoM2 = Math.round(8 * (Math.random()));
-                    meuA2 [x] = restoM2;
-                }
-                if(meuA2[0] == meuA2[1]){
-                    if(meuA2[0] == 9){
-                        varia = meuA2[0]
-                        varia--
-                        calcular(varia, meuA2[1])
-                    }else{
-
-                        varia = meuA2[0]
-                        varia++
-                        calcular(varia, meuA2[1])
+                    if(n1 == 1){         
+                        document.getElementById("img8").src = imgs1[ma1]
+                    }else if(n1 == 2){
+                        document.getElementById("img8").src = imgs2[ma1]
+                    }else if(n1 == 3){
+                        document.getElementById("img8").src = imgs3[ma1]
                     }
-                }else{  
-                    calcular(meuA2[0], meuA2[1])
                 }
-                function calcular(p0, p1){
-                    document.getElementById("img7").src = img[p0]
-                    document.getElementById("img8").src = img[p1]
-
-                }
-            }
-            if(p == 4){
-                setTimeout(function aquelecaraali(){animacao2("image/Determinação/Rune_Resolve.png")}, 1000)
-                meuA2 = [ ]
-                img = ["image/Determinação/Resto/Rune_Demolish.png", "image/Determinação/Resto/Rune_Font_of_Life.png", "image/Determinação/Resto/Rune_Mirror_Shell.png", "image/Determinação/Resto/Rune_Conditioning.png", "image/Determinação/Resto/Rune_Second_Wind.png", "image/Determinação/Resto/Rune_Bone_Plating.png", "image/Determinação/Resto/Rune_Overgrowth.png", "image/Determinação/Resto/Rune_Revitalize.png", "image/Determinação/Resto/Rune_Unflinching.png"]
-                for(x=0; x<=1; x++){
-                    restoM2 = Math.round(8 * (Math.random()));
-                    meuA2 [x] = restoM2;
-                }
-                if(meuA2[0] == meuA2[1]){
-                    if(meuA2[0] == 9){
-                        varia = meuA2[0]
-                        varia--
-                        calcular(varia, meuA2[1])
-                    }else{
-                        varia = meuA2[0]
-                        varia++
-                        calcular(varia, meuA2[1])
+                if(p == 3){
+                    setTimeout(function aquelecaraali(){animacao2("image/feitiçaria/Rune_Sorcery.png")}, 1000)
+                    imgs1 = ["image/Feitiçaria/Resto/Rune_Nullifying_Orb.png", "image/Feitiçaria/Resto/Rune_Manaflow_Band.png", "image/Feitiçaria/Resto/Rune_Nimbus_Cloak.png"]
+                    imgs2 = ["image/Feitiçaria/Resto/Rune_Transcendence.png", "image/Feitiçaria/Resto/Rune_Celerity.png", "image/Feitiçaria/Resto/Rune_Absolute_Focus.png"]
+                    imgs3 = ["image/Feitiçaria/Resto/Rune_Scorch.png", "image/Feitiçaria/Resto/Rune_Waterwalking.png", "image/Feitiçaria/Resto/Rune_Gathering_Storm.png"]
+                    if(n0 == 1){               
+                        document.getElementById("img7").src = imgs1[ma0]
+                    }else if(n0 == 2){               
+                        document.getElementById("img7").src = imgs2[ma0]
+                    }else if(n0 == 3){               
+                        document.getElementById("img7").src = imgs3[ma0]
                     }
-                }else{  
-                    calcular(meuA2[0], meuA2[1])
-                }
-                function calcular(p0, p1){
-                    document.getElementById("img7").src = img[p0]
-                    document.getElementById("img8").src = img[p1]
 
-                }
-            }
-            if(p == 5){
-                setTimeout(function aquelecaraali(){animacao2("image/inspiração/Rune_Inspiration.png")}, 1000)
-                meuA2 = [ ]
-                img = ["image/inspiração/Resto/Rune_Hextech_Flashtraption.png", "image/inspiração/Resto/Rune_Magical_Footwear.png", "image/inspiração/Resto/Rune_Perfect_Timing.png", "image/inspiração/Resto/Rune_Future's_Market.png", "image/inspiração/Resto/Rune_Minion_Dematerializer.png", "image/inspiração/Resto/Rune_Biscuit_Delivery.png", "image/inspiração/Resto/Rune_Cosmic_Insight.png", "image/inspiração/Resto/Rune_Approach_Velocity.png", "image/inspiração/Resto/Rune_Time_Warp_Tonic.png"]
-                for(x=0; x<=1; x++){
-                    restoM2 = Math.round(8 * (Math.random()));
-                    meuA2 [x] = restoM2;
-                }
-                if(meuA2[0] == meuA2[1]){
-                    if(meuA2[0] == 9){
-                        varia = meuA2[0]
-                        varia--
-                        calcular(varia, meuA2[1])
-                    }else{
-
-                        varia = meuA2[0]
-                        varia++
-                        calcular(varia, meuA2[1])
+                    if(n1 == 1){
+                        document.getElementById("img8").src = imgs1[ma1]
+                    }else if(n1 == 2){
+                                    document.getElementById("img8").src = imgs2[ma1]
+                    }else if(n1 == 3){                     
+                        document.getElementById("img8").src = imgs3[ma1]
                     }
-                }else{  
-                    calcular(meuA2[0], meuA2[1])
                 }
-                function calcular(p0, p1){
-                    document.getElementById("img7").src = img[p0]
-                    document.getElementById("img8").src = img[p1]
+                if(p == 4){
+                    setTimeout(function aquelecaraali(){animacao2("image/Determinação/Rune_Resolve.png")}, 1000)
+                    imgs1 = ["image/Dominação/Resto/Rune_Demolish.png", "image/Dominação/Resto/Rune_Font_of_Life.png", "image/Dominação/Resto/Rune_Mirror_Shell.png "]
+                    imgs2 = ["image/Dominação/Resto/Rune_Conditioning", "image/Dominação/Resto/Rune_Second_Wind.png", "image/Dominação/Resto/Rune_Bone_Plating.png"]
+                    imgs3 = ["image/Dominação/Resto/Rune_Overgrowth.png", "image/Dominação/Resto/Rune_Unflinching.png", "image/Dominação/Resto/Rune_Revitalize.png"]
+                    if(n0 == 1){               
+                        document.getElementById("img7").src = imgs1[ma0]
+                    }else if(n0 == 2){               
+                        document.getElementById("img7").src = imgs2[ma0]
+                    }else if(n0 == 3){               
+                        document.getElementById("img7").src = imgs3[ma0]
+                    }
 
+                    if(n1 == 1){
+                        document.getElementById("img8").src = imgs1[ma1]
+                    }else if(n1 == 2){
+                        document.getElementById("img8").src = imgs2[ma1]
+                    }else if(n1 == 3){                     
+                        document.getElementById("img8").src = imgs3[ma1]
+                    }
+                }
+                if(p == 5){
+                    setTimeout(function aquelecaraali(){animacao2("image/inspiração/Rune_Inspiration.png")}, 1000)
+                    imgs1 = ["image/inspiração/Resto/Rune_Hextech_Flashtraption.png", "image/inspiração/Resto/Rune_Magical_Footwear.png", "image/inspiração/Resto/Rune_Perfect_Timing.png"]
+                    imgs2 = ["image/inspiração/Resto/Rune_Future's_Market.png", "image/inspiração/Resto/Rune_Minion_Dematerializer.png", "image/inspiração/Resto/Rune_Biscuit_Delivery.png"]
+                    imgs3 = ["image/inspiração/Resto/Rune_Cosmic_Insight.png", "image/inspiração/Resto/Rune_Approach_Velocity.png", "image/inspiração/Resto/Rune_Time_Warp_Tonic.png"]
+                    if(n0 == 1){               
+                        document.getElementById("img7").src = imgs1[ma0]
+                    }else if(n0 == 2){               
+                        document.getElementById("img7").src = imgs2[ma0]
+                    }else if(n0 == 3){               
+                        document.getElementById("img7").src = imgs3[ma0]
+                    }
+
+                    if(n1 == 1){
+                        document.getElementById("img8").src = imgs1[ma1]
+                    }else if(n1 == 2){
+                        document.getElementById("img8").src = imgs2[ma1]
+                    }else if(n1 == 3){                     
+                        document.getElementById("img8").src = imgs3[ma1]
+                    }
+                    }
                 }
             }
-        }       
+        }    
 }
 function mudarcor(){
         document.getElementById("bt").style.borderColor = "rgb(216, 194, 150)"
