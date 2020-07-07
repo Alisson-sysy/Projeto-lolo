@@ -1,5 +1,9 @@
     function animacao(r){
-        document.getElementById("img1").style.opacity = "1"
+        document.getElementById("h11").style.opacity = "1"
+        document.getElementById("h11").style.transition = "1s"
+        setTimeout(controleTempo2, 100)
+        function controleTempo2(){
+            document.getElementById("img1").style.opacity = "1"
         setTimeout(img1, 100)
         function img1(){
         document.getElementById("img1").src = "image/Determinação/Rune_Resolve.png"
@@ -24,15 +28,45 @@
         function imgF(){
             document.getElementById("img1").src = r
         }
+        }
     }
     function aparece(m){
         document.getElementById(m).style.opacity = "1"
         document.getElementById(m).style.transition = "1s"
     }
+    function animaflex(){
+        setTimeout(voltaanimaflex1, 100)
+        function voltaanimaflex1(){
+            document.getElementById("img9F").style.opacity = 0
+            document.getElementById("img9F").style.marginBottom = "-444.7px"
+            document.getElementById("img9F").style.transition = ".8s"
+    
+            document.getElementById("img10F").style.opacity = 0
+            document.getElementById("img10F").style.transition = "2s"
+
+            document.getElementById("img11F").style.opacity = 0
+            document.getElementById("img11F").style.marginLeft = "-550px"
+            document.getElementById("img11F").style.transition = ".8s"
+        }
+
+        setTimeout(voltaanimaflex, 2250)
+        function voltaanimaflex(){
+            document.getElementById("img9F").style.opacity = 1
+            document.getElementById("img9F").style.marginBottom = 0
+            document.getElementById("img9F").style.transition = ".8s"
+
+            document.getElementById("img10F").style.opacity = 1
+            document.getElementById("img10F").style.transition = "2s"
+
+            document.getElementById("img11F").style.opacity = 1
+            document.getElementById("img11F").style.marginLeft = 0
+            document.getElementById("img11F").style.transition = ".8s"
+        }
+    
+    }
 
 function go(){
-    document.getElementById("h11").style.opacity = "1"
-    document.getElementById("h12").style.opacity = "1"
+    
     for(x=1; x<=5; x++){
         document.getElementById("img" + x).style.opacity = "0"
     }
@@ -235,6 +269,8 @@ function go(){
                 document.getElementById("img" + x).style.marginLeft = "-500px"
             }
             function animacao2(r){
+                document.getElementById("h12").style.opacity = "1"
+                document.getElementById("h12").style.transition = "1s"
                 document.getElementById("img6").style.marginLeft = "0"
                 document.getElementById("img6").style.opacity = "1"
                 document.getElementById("img6").style.transition = ".9s"
@@ -251,6 +287,12 @@ function go(){
                     document.getElementById("img8").style.transition = ".9s"
                 }
                 document.getElementById("img6").src = r
+
+                setTimeout(controleTempo3, 1500)
+                function controleTempo3(){
+                    document.getElementById("h13").style.opacity = 1
+                document.getElementById("h13").style.transition = "1s"
+                }
             }
             /*Sortar as img da segunda runa*/
             meuA2 = [ ]
@@ -349,9 +391,9 @@ function go(){
                 }
                 if(p == 4){
                     setTimeout(function aquelecaraali(){animacao2("image/Determinação/Rune_Resolve.png")}, 1000)
-                    imgs1 = ["image/Dominação/Resto/Rune_Demolish.png", "image/Dominação/Resto/Rune_Font_of_Life.png", "image/Dominação/Resto/Rune_Mirror_Shell.png "]
-                    imgs2 = ["image/Dominação/Resto/Rune_Conditioning", "image/Dominação/Resto/Rune_Second_Wind.png", "image/Dominação/Resto/Rune_Bone_Plating.png"]
-                    imgs3 = ["image/Dominação/Resto/Rune_Overgrowth.png", "image/Dominação/Resto/Rune_Unflinching.png", "image/Dominação/Resto/Rune_Revitalize.png"]
+                    imgs1 = ["image/Determinação/Resto/Rune_Demolish.png", "image/Determinação/Resto/Rune_Font_of_Life.png", "image/Determinação/Resto/Rune_Mirror_Shell.png "]
+                    imgs2 = ["image/Determinação/Resto/Rune_Conditioning", "image/Determinação/Resto/Rune_Second_Wind.png", "image/Determinação/Resto/Rune_Bone_Plating.png"]
+                    imgs3 = ["image/Determinação/Resto/Rune_Overgrowth.png", "image/Determinação/Resto/Rune_Unflinching.png", "image/Determinação/Resto/Rune_Revitalize.png"]
                     if(n0 == 1){               
                         document.getElementById("img7").src = imgs1[ma0]
                     }else if(n0 == 2){               
@@ -391,8 +433,57 @@ function go(){
                     }
                 }
             }
-        }    
-}
+        }
+        
+    NF = []
+    imgflex = ["image/Flex/apulhetaA.png", "image/Flex/bolinhaF.png", "image/Flex/coracaoD.png", "image/Flex/EscudoF-D.png", "image/Flex/estrelaA-F.png", "image/Flex/machadoA.png"]
+    for(x=0; x<=2; x++){
+        numeroF = Math.round(2 * (Math.random()) + 1);
+        NF[x] = numeroF
+    }
+    animaflex()
+    setTimeout(controleTempo, 2000);
+    function controleTempo(){
+        /*--------------------------------------------------------Flex PT1------------------------------------------------------*/
+        switch(NF[0]){
+            case 1:
+                document.getElementById("img9F").src = imgflex[4]
+                    break
+            case 2:
+                document.getElementById("img9F").src = imgflex[5]
+                    break
+            case 3:
+                document.getElementById("img9F").src = imgflex[0]
+                    break
+            }
+        /*--------------------------------------------------------Flex PT2------------------------------------------------------*/
+        switch(NF[1]){
+            case 1:
+                document.getElementById("img10F").src = imgflex[4]
+                    break
+            case 2:
+                document.getElementById("img10F").src = imgflex[1]
+                    break
+            case 3:
+                document.getElementById("img10F").src = imgflex[3]
+                    break
+                }
+                    /*--------------------------------------------------------Flex PT3------------------------------------------------------*/
+        switch(NF[2]){
+            case 1:
+                document.getElementById("img11F").src = imgflex[2]
+                    break
+            case 2:
+                document.getElementById("img11F").src = imgflex[1]
+                     break
+            case 3:
+                document.getElementById("img11F").src = imgflex[3]
+                    break
+        }  
+    }
+
+    }
+
 function mudarcor(){
         document.getElementById("bt").style.borderColor = "rgb(216, 194, 150)"
         document.getElementById("bt").style.boxShadow = "1px 1px 10px white"
