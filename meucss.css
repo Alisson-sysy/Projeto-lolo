@@ -21,11 +21,10 @@ body{
     width: 64px;
 }
 #bt{
-    margin-left: 10%;
     margin-top: 50px;
     padding: 15px;
     width: 120px;
-    background: rgb(30,35,40);
+    background: rgb(30,35,40);  
     border-color: rgb(200,169,108);
     box-shadow: 1.5px 1.5px 1px black ;
     color: rgb(184, 171, 132);

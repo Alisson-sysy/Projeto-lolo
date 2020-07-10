@@ -1,33 +1,50 @@
+
+function mudarcor(){
+    document.getElementById("bt").style.borderColor = "rgb(216, 194, 150)"
+    document.getElementById("bt").style.boxShadow = "1px 1px 10px white"
+    document.getElementById("bt").style.transition = ".2s"
+setTimeout(muda, 300)
+function muda(){
+    document.getElementById("bt").style.borderColor = "rgb(207, 181, 126)"
+    document.getElementById("bt").style.boxShadow = ".5px .5px 2px white"
+    document.getElementById("bt").style.transition = ".2s"
+}
+
+}
+function tiracor(){
+document.getElementById("bt").style.borderColor = "rgb(200,169,108);"
+document.getElementById("bt").style.boxShadow = "1.5px 1.5px 1px black "
+}
     function animacao(r){
         document.getElementById("h11").style.opacity = "1"
         document.getElementById("h11").style.transition = "1s"
         setTimeout(controleTempo2, 100)
         function controleTempo2(){
             document.getElementById("img1").style.opacity = "1"
-        setTimeout(img1, 100)
-        function img1(){
-        document.getElementById("img1").src = "image/Determinação/Rune_Resolve.png"
-        }
-        setTimeout(img2, 200)
-        function img2(){
-            document.getElementById("img1").src = "image/dominação/Rune_Domination.png"
-        }
-        setTimeout(img3, 300)
-        function img3(){
-            document.getElementById("img1").src = "image/precisão/Rune_Precision.png"
-        }
-        setTimeout(img4, 400)
-        function img4(){
-            document.getElementById("img1").src = "image/inspiração/Rune_Inspiration.png"
-        }
-        setTimeout(img5, 500)
-        function img5(){
-            document.getElementById("img1").src = "image/Feitiçaria/Rune_Sorcery.png"
-        }
-        setTimeout(imgF, 600)
-        function imgF(){
-            document.getElementById("img1").src = r
-        }
+            setTimeout(img1, 100)
+            function img1(){
+            document.getElementById("img1").src = "image/Determinação/Rune_Resolve.png"
+            }
+            setTimeout(img2, 200)
+            function img2(){
+                document.getElementById("img1").src = "image/dominação/Rune_Domination.png"
+            }
+            setTimeout(img3, 300)
+            function img3(){
+                document.getElementById("img1").src = "image/precisão/Rune_Precision.png"
+            }
+            setTimeout(img4, 400)
+            function img4(){
+                document.getElementById("img1").src = "image/inspiração/Rune_Inspiration.png"
+            }
+            setTimeout(img5, 500)
+            function img5(){
+                document.getElementById("img1").src = "image/Feitiçaria/Rune_Sorcery.png"
+            }
+            setTimeout(imgF, 600)
+            function imgF(){
+                document.getElementById("img1").src = r
+            }
         }
     }
     function aparece(m){
@@ -64,9 +81,12 @@
         }
     
     }
-
+    musicplay = " "
 function go(){
-    
+    if(musicplay != 1){
+        document.getElementById("music").play(); 
+    }
+    musicplay = 1
     for(x=1; x<=5; x++){
         document.getElementById("img" + x).style.opacity = "0"
     }
@@ -392,7 +412,7 @@ function go(){
                 if(p == 4){
                     setTimeout(function aquelecaraali(){animacao2("image/Determinação/Rune_Resolve.png")}, 1000)
                     imgs1 = ["image/Determinação/Resto/Rune_Demolish.png", "image/Determinação/Resto/Rune_Font_of_Life.png", "image/Determinação/Resto/Rune_Mirror_Shell.png "]
-                    imgs2 = ["image/Determinação/Resto/Rune_Conditioning", "image/Determinação/Resto/Rune_Second_Wind.png", "image/Determinação/Resto/Rune_Bone_Plating.png"]
+                    imgs2 = ["image/Determinação/Resto/Rune_Conditioning.png", "image/Determinação/Resto/Rune_Second_Wind.png", "image/Determinação/Resto/Rune_Bone_Plating.png"]
                     imgs3 = ["image/Determinação/Resto/Rune_Overgrowth.png", "image/Determinação/Resto/Rune_Unflinching.png", "image/Determinação/Resto/Rune_Revitalize.png"]
                     if(n0 == 1){               
                         document.getElementById("img7").src = imgs1[ma0]
@@ -483,20 +503,3 @@ function go(){
     }
 
     }
-
-function mudarcor(){
-        document.getElementById("bt").style.borderColor = "rgb(216, 194, 150)"
-        document.getElementById("bt").style.boxShadow = "1px 1px 10px white"
-        document.getElementById("bt").style.transition = ".2s"
-    setTimeout(muda, 300)
-    function muda(){
-        document.getElementById("bt").style.borderColor = "rgb(207, 181, 126)"
-        document.getElementById("bt").style.boxShadow = ".5px .5px 2px white"
-        document.getElementById("bt").style.transition = ".2s"
-    }
-
-}
-function tiracor(){
-    document.getElementById("bt").style.borderColor = "rgb(200,169,108);"
-    document.getElementById("bt").style.boxShadow = "1.5px 1.5px 1px black "
-}
